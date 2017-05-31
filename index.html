@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Third</title>
+
+	<!--FONTS--> 
+	<!--font-family: 'PT Sans', sans-serif; -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet"> 
+
+	<!--Reset default styles-->
+	<link rel="stylesheet" href="css/reset.css">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- HTML5 for IE <9 -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+	<body>
+		<!--Feedback Block-->
+		<div class="feedback" id="feedB">
+			<form action="" name="form" onsubmit="return false;">
+				<button class="close" onclick="closeFeedB()"></button>
+				<h3>обратная связь</h3>
+				<label for="name">Ваше имя *</label>
+				<input type="text" name="name" id="name">
+				
+				<label for="phone">Телефон *</label>
+				<input type="tel" name="phone" id="phone">
+				
+				<label for="email">Email *</label>
+				<input type="email" name="email" id="email">
+
+				<label for="message">Сообщение</label>
+				<textarea name="message" id="message"></textarea>
+
+				<input type="submit" id="send" value="отправить" onclick="validate(this);">
+			</form>
+		</div><!--/.feedback-->
+
+
+		<div class="wrapp">
+
+			<div class="header-wrapp">
+				<header>
+
+					<div class="logo fl-l">
+						<a href="/">
+							<img src="img/logo.png" width="270px" height="100px" alt="Логотип" title="Логотип компании">
+						</a>
+					</div>
+
+					<div class="info-block fl-r">
+						<p>+7(499) 777-77-77</p>
+						<p>+7(499) 777-77-77</p>
+						<a href="#" class="fl-r" id="openFeedB" onclick="openFeedB()">Обратная связь</a>
+					</div>
+
+				</header>	
+			</div><!--/.header-wrapp-->
+
+			<div class="main-menu">
+				<nav>
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Доставка и оплата</a></li>
+						<li><a href="#">Прайс-лист</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div><!--/.main-menu-->
+			
+			<div class="slider-wrapp">	
+				<div id="slider">
+					<img src="img/slider/slide1.jpg" alt="Первый слайд" title="Первая картинка слайда" width="1240px" height="400px" class="slide show">
+					<img src="img/slider/slide2.jpg" alt="Второй слайд" title="Вторая картинка слайда" width="1240px" height="400px"  class="slide">
+					<button id="nav-prev">&lt;</button>
+					<button id="nav-next">&gt;</button>
+				</div><!--/.slider -->
+			</div>	
+
+			<div class="content">
+
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li>Бытовая техника</li>
+					</ul>
+				</div><!--/.breadcrumbs-->
+
+				<aside class="fl-l">
+					<ul class="catalog-menu">
+						<li><a href="#">Автомобили</a></li>
+						<li class="has-menu"><a href="#">Бытовая техника</a>
+							<ul>
+								<li><a href="#">Микроволновки</a></li>
+								<li><a href="#">Холодильники</a></li>
+								<li><a href="#">Посудомоечные машины</a></li>
+								<li><a href="#">Чайники</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Мобильная техника</a></li>
+						<li><a href="#">Компьютеры</a></li>
+						<li><a href="#">Одежда</a></li>
+						<li><a href="#">Недвижимость</a></li>
+					</ul>
+
+					<a href="#" download class="price-download">Прайс-лист</a>
+				</aside>
+				
+				<div class="main-content fl-r">
+					<section class="catalog">
+
+						<div class="catalog-item">
+							<figure>
+								<a href="#">
+									<img src="img/img-cart.jpg" alt="" width="205px">
+									<figcaption>Самый клевый чайник, который надо купить!</figcaption>
+								</a>
+							</figure>
+							<div class="price-block">
+								<span class="price">
+									1 900 р.
+								</span>
+								<a href="#" class="add-cart"></a>
+							</div>
+						</div><!--/.catalog-item-->
+
+						<div class="catalog-item">
+							<figure>
+								<a href="#">
+									<img src="img/img-cart.jpg" width="205px" alt="">
+									<figcaption>Самый клевый чайник, который надо купить!</figcaption>
+								</a>
+							</figure>
+							<div class="price-block">
+								<span class="price">
+									1 900 р.
+								</span>
+								<a href="#" class="add-cart"></a>
+							</div>
+						</div><!--/.catalog-item-->
+
+						<div class="catalog-item">
+							<figure>
+								<a href="#">
+									<img src="img/img-cart.jpg" width="205px" alt="">
+									<figcaption>Самый клевый чайник, который надо купить!</figcaption>
+								</a>
+							</figure>
+							<div class="price-block">
+								<span class="price">
+									1 900 р.
+								</span>
+								<a href="#" class="add-cart"></a>
+							</div>
+						</div><!--/.catalog-item-->
+
+						<div class="catalog-item">
+							<figure>
+								<a href="#">
+									<img src="img/img-cart.jpg" width="205px" alt="">
+									<figcaption>Самый клевый чайник, который надо купить!</figcaption>
+								</a>
+							</figure>
+							<div class="price-block">
+								<span class="price">
+									1 900 р.
+								</span>
+								<a href="#" class="add-cart"></a>
+							</div>
+						</div><!--/.catalog-item-->
+
+						<div class="catalog-item">
+							<figure>
+								<a href="#">
+									<img src="img/img-cart.jpg" width="205px" alt="">
+									<figcaption>Самый клевый чайник, который надо купить!</figcaption>
+								</a>
+							</figure>
+							<div class="price-block">
+								<span class="price">
+									1 900 р.
+								</span>
+								<a href="#" class="add-cart"></a>
+							</div>
+						</div><!--/.catalog-item-->
+
+					</section><!--/.catalog-->
+
+					<section class="pagination">
+						<ul>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li>3</li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+						</ul>
+					</section><!--/.pagination-->
+
+					<section class="main-info">	
+						<div class="fl-l">
+							<p>Компания «Пиксель Плюс» существует более 6 лет, за это время мы принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы: неразделённой любви, ухода молодости, угасания души. </p>
+						</div>
+
+						<div class="fl-r">
+							<p>Одним из основных направлений работ нашей компании является поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в нашем московском офис</p>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="spacer"></div>
+			<div class="footer-wrap">
+				<footer>
+					<div class="copyright">
+						<p>
+							© 2012–2013 ЗАО «Компания» <br>
+							info@name.ru
+						</p>
+					</div>
+
+					<div class="footer-menu">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Прайс-лист</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+
+					<div class="footer-info">
+						<a href="#">Разработка сайта</a>
+						<p>компания «Пиксель Плюс»</p>
+					</div>
+				</footer>
+			</div><!--/.footer-wrap -->
+			
+		</div><!--/.wrapper-->
+		<script src="js/main.js"></script>
+	</body>
+</html>
